@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Rutas';
+
+
+  constructor(private router: Router) {
+
+  }
+
+  onClick(pRuta: string) {
+    //Tareas previas
+    console.log('Se realizan tareas previas');
+    this.router.navigate([pRuta]);
+  }
 }
